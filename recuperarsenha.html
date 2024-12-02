@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/recuperarstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Recuperar Senha</title>
+  </head>
+  <body>
+    <video id="background-video" autoplay loop muted poster="assets/Videos/Dark Star_ Nothing Escapes _ Skins Teaser - League of Legends.mp4">
+        <source src="assets/Videos/Dark Star_ Nothing Escapes _ Skins Teaser - League of Legends.mp4" type="video/mp4">
+    </video>
+
+    <div class="recuperarsenha">
+        <form action="recuperar.php" method="POST"> 
+            <h1 class="recuperar-tittle">Recuperar senha</h1>
+            <p>Digite seu E-mail</p>
+            <input id="usuario" type="email" name="email" placeholder="E-mail" required>
+            <br><br>
+            <div class="recuperar-button">
+                <button type="submit">Enviar Código</button>
+            </div>
+        </form>
+    </div>
+
+  </body>
+</html>

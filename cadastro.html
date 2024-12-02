@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\registro.css"> <!Link do CSS>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!Importação de uma biblioteca para os icones. Sem isso os icones não funcionam(Estarei usando o GoogleFonts, e sim estou com preguiça de baixar cada um e colocar manualmente)>
+    <title>Registre-se</title>
+</head>
+<body>
+    <video id="background-video" autoplay loop muted poster="assets\Videos\Dark Star_ Nothing Escapes _ Skins Teaser - League of Legends.mp4"> <!Importação do video de fundo, coloque o video na pasta do folder(Vai por mim não vai funcionar se não estiver na pasta do folder)>
+        <source src="assets\Videos\Dark Star_ Nothing Escapes _ Skins Teaser - League of Legends.mp4" type="video/mp4"> <!Coloque o caminho do vídeo corretamente>
+    </video>
+    <div class="form"> <!Dentro do form header o Cadastre-se e botão logar, tudo para o back end posterior>
+        <form action="php\config.php" method="POST"> 
+            <div class="form-header">
+                <div class="tittle">
+                <h1>Olá Player, Registre-se abaixo</h1>
+                </div>
+            <div class="login-button"> <!Botão Login>
+                <button><a class="cadastre-sebutton" href="login.php" target="_blank">Entrar</a></button>
+                </div>
+            </div> 
+            
+            <div class="input-group">       <!Contem todo o resto do formulario /Dados de registro. Nome,Sobrenome,Email e etc> <!Isso está fora do form header>
+               
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Nome do usuario>
+                    <i class="material-icons">badge</i> <!Assim que os icones são colocados no input box. Coloque os nomes dos icones corretamente, Só repetir para todos que você quiser.>
+                    <label for="primeironome">Nome</label>
+                    <input id="primeironome" type="text" name="primeironome" placeholder="Digite o seu primeiro nome." required></input> <!Do placeholder em diante é para obrigar a digitação do nome>
+                </div>
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Sobrenome do usuario>
+                    <i class="material-icons">badge</i>
+                    <label for="sobrenome">Sobrenome</label>
+                    <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite o seu sobrenome." required></input> <!Do placeholder em diante é para obrigar a digitação do nome>
+                </div>
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!E-mail do usuario>
+                    <i class="material-icons">mail</i>
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" placeholder="Digite o seu E-mail." required></input> <!Do placeholder em diante é para obrigar a digitação do nome>
+                </div>
+                    
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Telefone do usuario>
+                    <i class="material-icons">phone</i>
+                    <label for="telefone">Celular</label>
+                    <input id="telefone" type="text" autocomplete="off" name="telefone" maxlength="11" placeholder="(xx)xxxx-xxxx" pattern="\d{11}" title="Digite apenas números (10 dígitos)" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                    
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Senha do usuario>
+                    <i class="material-icons">password</i>
+                    <label for="senha">Senha</label>
+                    <input id="senha" type="password" name="senha"  placeholder="Digite sua senha" required ></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                    
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Confirmação da senha do usuario>
+                    <i class="material-icons">password</i>
+                    <label for="confirmesenha">Confirme sua Senha</label>
+                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                    
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Endereço do usuario>
+                    <i class="material-icons">my_location</i>
+                    <label for="endereco">Endereço</label>
+                    <input id="endereco" type="text" name="endereco" placeholder="Digite seu endereço " required ></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                    
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Número residencial do usuario>
+                    <i class="material-icons">pin_drop</i>
+                    <label for="numero">Número Residencial</label>
+                    <input id="numero" type="text" name="numero" placeholder="Digite o N°"  maxlength="5" pattern="\d*" title="Digite apenas números até 5 digitos" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!CPF do usuario>
+                    <i class="material-icons">assignment_ind</i>
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="text" name="cpf"  placeholder="Digite seu CPF" maxlength="11" pattern="\d{11}" title="Digite apenas números (14 dígitos)" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Complemento do usuario>
+                    <i class="material-icons">map</i>
+                    <label for="complemento">CEP</label>
+                    <input id="complemento" type="text" name="complemento" placeholder="Digite seu CEP"  maxlength="8" pattern="\d{8}" title="Digite apenas números" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!RG do usuario>
+                    <i class="material-icons">assignment_ind</i>
+                    <label for="rg">RG</label>
+                    <input id="rg" type="text" name="rg" placeholder="Digite seu RG"  maxlength="11" pattern="\d{11}" title="Digite apenas números (11 dígitos)" required></input> <!Do placeholder em diante é para obrigar a digitação do nome usamos o formato do telefone como mensagem obrigatoria>
+                </div>
+                
+                
+                <div class="input-box">     <!Esta é a caixa onde vai ficar a digitação do usuario> <!Data do usuario>
+                    <i class="material-icons">calendar_month</i>
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input id="data-nascimento" type="date" name="data-nascimento" required>
+                </div>
+                 
+            </div> <!Div de fechamento do input Group para não ficar perdido depois.///////////////////////////////////////////////////////>
+          
+                
+                    <div class="genero-inputs" > <!Aqui(abaixo) é onde será escolhido ou não o gênero, estarei usando Radio ao invés de select porque não tenho capacidade de fazer o select funcionar.>
+                        <div class="genero-titulo">
+                            <h6>Gênero</h6>
+                        </div>
+    
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input id="female" type="radio" name="gender" value="Feminino" required>
+                                <label for="female">Feminino</label>
+                            </div>
+    
+                            <div class="gender-input">
+                                <input id="male" type="radio" name="gender" value="Masculino">
+                                <label for="male">Masculino</label>
+                            </div>
+    
+                            <div class="gender-input">
+                                <input id="others" type="radio" name="gender" value="Outros">
+                                <label for="others">Outros</label>
+                            </div>
+    
+                            <div class="gender-input">
+                                <input id="none" type="radio" name="gender" value="Prefiro não dizer">
+                                <label for="none">Prefiro não dizer</label>
+                            </div>
+                        </div>
+                    </div> <!Div de fechamento do genero-inputs para não ficar perdido depois.///////////////////////////////////////////////////////>
+
+                    <div class="continuar-button">
+                          <button name="Cadastrar" type="submit">Continuar</button>
+                    </div>
+                    
+                </div> <!Div de fechamento do form para não ficar perdido depois.///////////////////////////////////////////////////////>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

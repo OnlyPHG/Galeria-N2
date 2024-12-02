@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&family=Sofadi+One&display=swap');
+
+body {
+    font-family: "Sansita Swashed", system-ui;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.gallery-container {
+    position: relative;
+    width: 20%;
+    margin: 10px;
+   
+}
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    min-width: 100%; /* Cada item ocupará 100% da largura da galeria */
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo das setas de rolagem */
+button {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;  /* Remover fundo */
+    color: black; /* Cor das setas */
+    border: none;  /* Remover borda */
+    font-size: 30px; /* Tamanho da seta */
+    padding: 10px;  /* Espaçamento dentro do botão */
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%); /* Alinhar a seta verticalmente */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Suavizar transições */
+}
+
+
+button:hover {
+    transform: scale(1.1);  /* Aumenta o tamanho da seta */
+    opacity: 0.8;  /* Diminui a opacidade um pouco */
+}
+
+
+.prev {
+    left: 10px; /* Coloca o botão à esquerda */
+}
+
+
+.next {
+    right: -92rem; /* Coloca o botão à direita */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Aumenta a opacidade do botão quando hover */
+    transform: scale(1.1); /* Aumenta o botão levemente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Aumenta a sombra para um efeito de foco */
+}
+
+/* Estilo para a galeria de vídeos */
+.gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-2-item {
+    text-align: center;
+}
+
+.gallery-2 .gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-2-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item video:hover {
+    transform: scale(1.00);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Garantir que o footer ocupe toda a largura e fique fixo no fundo da página */
+footer {
+    display: flex;                 /* Flexbox para centralizar os itens */
+    justify-content: center;       /* Centraliza o conteúdo horizontalmente */
+    align-items: center;           /* Centraliza o conteúdo verticalmente */
+    padding: 10px;
+    background-color: #000000;
+    height: 80px;                 /* Altura do footer */
+    width: 100%;                   /* Garante que o footer ocupe toda a largura */
+    position: fixed;               /* Fixar o footer no final da página */
+    bottom: 0;                     /* Posicionar no fundo */
+    z-index: 10;                   /* Colocar o footer acima de outros conteúdos */
+}
+
+/* Ajuste do corpo da página para garantir que o conteúdo não seja sobreposto pelo footer */
+body {
+    font-family: "Sansita Swashed", system-ui;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    padding-bottom: 200px;         /* Adiciona um padding para garantir que o conteúdo não fique oculto atrás do footer */
+}
+
+/* Container do botão Cadastre-se */
+.cadastre-sebutton {
+    display: flex;
+    justify-content: center;       /* Garantir que o botão esteja centralizado horizontalmente */
+    align-items: center;           /* Garantir que o botão esteja centralizado verticalmente */
+}
+
+/* Estilo do botão */
+.cadastre-sebutton button {
+    font-family: "Sansita Swashed", system-ui;
+    width: 200px;                  /* Largura fixa do botão */
+    left: 45%;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-size: medium;
+    padding: 0.60rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito hover do botão */
+.cadastre-sebutton button:hover {
+    background-color: #6e0000;     /* Altera a cor ao passar o mouse */
+}
+
+/* Link dentro do botão */
+.cadastre-sebutton button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000;  /* Cor do texto */
+    font-style: italic;
+    font-size: medium;
+}
+

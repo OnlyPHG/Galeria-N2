@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;600&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #0d0d0d; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    overflow-x: hidden; /* Evitar rolagem horizontal */
+    flex-direction: column; /* Colocar conteúdo e footer em uma coluna */
+}
+/* Fazer o conteúdo ocupar o espaço disponível, empurrando o footer para baixo */
+.main-content {
+    flex: 1; /* Faz esta área crescer e ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-image: url('assets\imagens\Aatrox.webp');
+    background-size: cover;
+    background-position: center;
+    height: 20vh;
+    display: flex;
+    flex-direction: column; /* Alinha elementos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 0 20px; /* Garantir espaçamento para telas menores */
+}
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 10px auto;
+}
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #e5c07b; /* Destaque dourado */
+}
+
+.section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Botão com efeito épico */
+button {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(45deg, #e63946, #f77f00);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(255, 100, 50, 0.5);
+}
+
+/* Galeria estilo LoL */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo para vídeos na galeria */
+.gallery-item video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-item video:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer fixado no final */
+footer {
+    background: #1a1a1a;
+    color: #bbbbbb;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    width: 100%; /* Garantir que ocupe toda a largura */
+}
+
+footer a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+.scrollable {
+    max-height: 300px; /* Define a altura máxima do contêiner */
+    overflow-y: auto; /* Adiciona rolagem vertical */
+    padding: 10px; /* Espaçamento interno para legibilidade */
+    background-color: #000000; /* Fundo para contraste */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+.scrollable::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background: #555; /* Cor da barra */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; /* Cor ao passar o mouse */
+}

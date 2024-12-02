@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/hub.css">
+    <title>Hub</title>
+  </head>
+  <body>
+    <header>
+        <h1>Galeria de Campeões</h1>
+    </header>
+
+    <div class="gallery-container">
+    
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+
+    
+        <div class="gallery">
+            
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div class="caption" id="modalCaption"></div>
+            </div>
+            
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Aatrox.html">
+                <img src="assets/imagens/Aatrox.webp" alt="Aatrox">
+                <p>Aatrox</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Ahri.html">
+                <img src="assets/imagens/Ahri.webp" alt="Ahri">
+                <p>Ahri</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Akali.html">
+                <img src="assets\imagens\Akali.webp" alt="Akali">
+                <p>Akali</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Blitz.html">
+                <img src="assets\imagens\Blitz.webp" alt="Blitz">
+                <p>Blitz</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Brand.html">
+                <img src="assets\imagens\Brand.webp" alt="Brand">
+                <p>Brand</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Fiddlesticks.html">
+                <img src="assets\imagens\Fiddlesticks.webp" alt="Fiddlesticks">
+                <p>Fiddlesticks</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Fizz.html">
+                <img src="assets\imagens\Fizz.webp" alt="Fizz">
+                <p>Fizz</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Jhin.html">
+                <img src="assets/imagens/Jhin.webp" alt="Jhin">
+                <p>Jhin</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="Projeto%20Desenvolvimento%20web%20N2/pagesecundarias/Jinx.html">
+                <img src="assets\imagens\Jinx.webp" alt="Jinx">
+                <p>Jinx</p>
+                </a>
+            </div>
+        </div>
+
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <script src="scripts\rolagem.js"></script>
+    <script src="scripts\clickargaleria.js"></script>
+
+    <div class="gallery gallery-2">
+        <div class="gallery-item">
+            <video controls autoplay loop muted>
+                <source src="assets/Videos/O que é League of Legends_.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <p>Introdução</p>
+        </div>
+        <div class="gallery-item">
+            <video controls autoplay loop muted>
+                <source src="assets/Videos/Still Here _ Season 2024 Cinematic - League of Legends (ft. Forts, Tiffany Aris, and 2WEI).mp4" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <p>Still Here Season 2024</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="cadastre-sebutton">
+            <a href="cadastro.html" target="_blank">
+                <button>Cadastre-se</button>
+            </a>
+        </div>
+    </footer>
+  </body>
+</html>

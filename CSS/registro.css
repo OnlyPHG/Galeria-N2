@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&family=Sofadi+One&display=swap'); /*Aqui estamos importando uma fonte do google fonts*/
+
+*{                                                         /*Aqui estamos mexendo em tudo do projeto, serio tudo mesmo. Então não vai fazer ***** por favor.*/
+    padding:0;                                             /*O padding define um espaço antes da borda, basicamente impede o conteudo de ficar colado na borda*/
+    margin:0;                                              /*O margin define um espaço entre os itens, basicamente impede o conteudo de ficar colado um no outro tipo texto um por cima do outro*/
+    box-sizing: border-box;                                /*Uma Caixa para onde o formulario vai ficar dentro, basicamente a borda dele*/
+    font-family: "Sansita Swashed", system-ui;             /*Aqui estamos aplicando a fonte que importamos no inicio*/
+}
+body{                             /*Aqui vamos mexer em tudo que estiver dentro do body lá no HTML*/
+    width:100%;                   /*Vamos usar a largura maxima aqui */
+    height:100vh;                 /*vh: Significa "viewport height". 1 vh é igual a 1% da altura da área visível do navegador (ou seja, a altura da janela do navegador sem considerar barras de rolagem).Estamos usando 100% da visualização do navegador */
+    display: flex;                /*Isso aqui é uma ******, se der certo usa senão da seu jeito*/ /*Quando você aplica display: flex; a um contêiner, você transforma o seu comportamento de layout, permitindo que seus itens filhos sejam organizados e alinhados de maneira mais controlada. (Conjunto Display, Justify e Align-items)*/
+    justify-content: center;      /* Aqui estamos alinhando os itens horizontalmente ao centro (Conjunto Display, Justify e Align-items) */
+    align-items:center ;          /* Aqui estamos alinhando os itens verticalmente ao centro (Conjunto Display, Justify e Align-items)*/
+    background-color: gray;     /*Aqui estamos definindo a cor de fundo*/
+}
+.container {
+    display: flex;           /*Explicação na linha 12*/
+    justify-content: center; /* Alinha o vídeo horizontalmente ao centro */
+    align-items: center;     /* Alinha o vídeo verticalmente ao centro */
+    height: 50vh;            /* Faz com que o contêiner ocupe a altura total da visualização em relação ao tamanho original já que usamos o vh */
+    width: 50%;              /* Define a largura do contêiner como 50% da largura da visualização */
+    overflow: hidden;        /* Oculta qualquer parte do vídeo que ultrapasse os limites do contêiner */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /*Gradiente Linear*/
+    border-radius: 5px;      /*Estamos definindo a angulação da borda aqui(Arredondando a borda)*/
+    border:1px solid rgba(255, 255, 255, 0.18); /*Cor de fundo da borda ao selecionar a mesma*/
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /*Sombra da borda, COR,TAMANHO DA SOMBRA E ETC*/
+}
+.form {   /*Aqui é todo o formulario, onde fica as caixas que o cliente vai digitar seus dados, Nome,E-mail etc. CUIDADO AO MEXER AQUI*/
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(245, 245, 245, 0.212);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #ffffff59;
+    backdrop-filter:blur(8px);
+}
+.form-header { /*Apenas alguns ajustes para complementar o form como um todo.(Espaço entre os itens,Centraliação e etc)*/
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {  /*Aqui complementamos a posição do botão logar com algumas configurações posteriores*/
+    display: flex;
+    align-items: center;
+}
+
+.login-button button { /*Aqui definimos como vai ser o desing do botão Logar(Formato,cor de fundo estilo de fonte etc)*/
+    border: none;
+    background-color: #000000;
+    font-style: italic;
+    font-size: x-large;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover { /*Cor quando passamos o mouse por cima do botão Logar*/
+    background-color: #ff0000;
+}
+
+.login-button button a { /*Configurando o texto, tamanho e cor do botão Logar*/
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-style: italic;
+    font-size:medium;
+}
+
+.form-header h1::after {   /*Isso aqui é o estilo para o titulo"Cadastre-se"*/
+    content: '';
+    display: block;
+    width: 28rem;
+    height: 0.7rem;
+    background-color: #000000;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group { /*Ajustes no input onde fica os dados do cliente, Nome,Sobrenome,Senha e etc */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box { /*Ajustes no input onde fica os dados do cliente, Nome,Sobrenome,Senha e etc(Alinhamento) */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input { /*Ajustes no input onde fica os dados do cliente, Nome,Sobrenome,Senha e etc(Ajuste de borda,Margem,Fonte e cor de seleção) */
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 10px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover { /*Cor quando o mouse passar por cima dos inputs(Favor não deixar transparente) */
+    background-color: #00000075;
+}
+
+.input-box input:focus-visible { /*Cor da borda quando o input for selecionado*/
+    outline: 1px solid #ff0000;
+}
+
+.input-box label, /*Cor das fontes do formulario*/
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder { /*Cor das letras dentro dos inputs*/
+    color: #000000be;
+}
+.continuar-button button { /*Estilização,Alinhamento,Ajuste de fonte e posição do botão continuar */
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #000000;
+    font-style: italic;
+    font-size:medium;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continuar-button button:hover { /*Cor quando o mouse passar por cima do botão continuar */
+    background-color: #ff0000f1;
+}
+.continuar-button button a { /*Complementação dos ajustes de fonte, cor e alinhamento */
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+.gender-group { /*Ajustes do Radios de gênero, Posição,Margem e Alinhamento*/
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+
+.gender-input { /*Balanceamento dos ajustes acima */
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input { /*Ajuste de margem. */ 
+    margin-right: 0.35rem;
+}
+
+.gender-input label { /*Ajusto do nome 'Gênero' */
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+#background-video {  /*Não sei o que eu fiz aqui, fui pesquisando e juntando até que deu certo.(Por o video de fundo na tela.)*/
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
